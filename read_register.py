@@ -28,8 +28,13 @@ a=instrument.read_register(4000, 1)
 b=a/10
 print("total power is",b,' KWh')
 
-a=instrument.read_register(4033, 1)
-print("A-N voltage",a)
+a=instrument.read_register(4010, 1)
+print("voltage line to line ",a)
+frequency=instrument.read_register(4013,1)
+print("frequency is",frequency)
+
+print("\n\n\n\n\n\n\n\n\n\n")
+
 
 RealEnergyTotal=instrument.read_register(1000,1)
 print("RealEnergyTotal is ", RealEnergyTotal)
